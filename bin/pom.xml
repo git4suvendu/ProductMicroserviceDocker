@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.demo.application</groupId>
 	<artifactId>ProductServiceDocker</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>ProductServiceDocker</name>
 	<description>ProductService project for Spring Boot</description>
 
@@ -52,8 +52,8 @@
       			<artifactId>docker-maven-plugin</artifactId>
       			<!-- <version>VERSION GOES HERE</version> --> 
       			<configuration>
-        			<imageName>productservice</imageName>
-        			<baseImage>java:8-alpine</baseImage>
+        			<imageName>ProductService</imageName>
+        			<baseImage>java:8</baseImage>
         			<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
         			<!-- copy the service's jar file from target into the root directory of the image --> 
         				<resources>
